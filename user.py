@@ -41,7 +41,15 @@ class Users:
                 return True
         return False
 
-    def 
+    def check_user(cls,username, password):
+        '''thsi block roght here will check if user is present and the user
+        password is also correct'''
+
+
+        user = cls.find_user(username)
+        if user and user.password == password:
+            return True
+        return False
 
     
 
