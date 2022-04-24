@@ -26,3 +26,38 @@ def check_user_password(username, password):
     return Users.check_user(username, password)
 
 
+
+
+
+
+def create_new_credentials(platform,user_account_username,account_password):
+    ''''create credential for platfor, eg facebook'''
+
+
+    new_credential = Credentials(
+        platform,user_account_username,account_password
+
+    )
+    return new_credential
+
+
+def save_credentials(credentials):
+    '''save credentials to the database'''
+
+    credentials.save_credentials()
+
+
+
+def display_credentials():
+    '''function to display credentials'''
+
+
+    return Credentials.display_credentials()
+
+
+def delete_credentials(platform):
+    '''delete credentials'''
+
+
+
+
