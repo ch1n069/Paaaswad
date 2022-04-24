@@ -19,6 +19,30 @@ class Users:
 
         Users.user_list.remove(self)
 
+
+
+    @classmethod
+    #Above is decorator observing into the whole class that
+    def find_user(cls,username):
+        '''responsible for findind the user their username'''
+        for user in cls.user_list:
+            if user.username == username:
+                return user
+
+
+
+    @classmethod
+
+    def user_exists(cls,username):
+        '''check if username is in our given user list'''
+
+        for user in cls.user_list:
+            if user.username == username:
+                return True
+        return False
+
+    def 
+
     
 
 
