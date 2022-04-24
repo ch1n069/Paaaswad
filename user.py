@@ -1,4 +1,4 @@
-class Users:
+class Users():
 
     user_list = []
 
@@ -42,7 +42,7 @@ class Users:
         return False
 
     def check_user(cls,username, password):
-        '''thsi block roght here will check if user is present and the user
+        '''This block is here will check if user is present and the user
         password is also correct'''
 
 
