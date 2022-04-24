@@ -74,5 +74,14 @@ def generate_password(password_length):
     '''generate random password'''
 
 
+    return Credentials.generate_password(password_length)
+
+
+def main():
+
+
+    
+
+
 
 
