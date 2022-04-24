@@ -26,3 +26,24 @@ class Credentials():
         '''method to delete saved credential'''
 
         Credentials.user_credentials.remove(self)
+
+
+
+    @classmethod
+    def find_by_platform(cls,platform):
+        '''finds account using platform'''
+
+        for credentials in cls.user_credentials:
+            if credentials.platform == platform:
+                return credentials
+        return False
+
+    
+    @classmethod
+    def display_credentials(cls):
+        '''display all the saved accounts'''
+
+
+        return cls.user_credentials
+
+    
