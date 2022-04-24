@@ -106,6 +106,26 @@ def main():
 
 
 
+while True:
+    print("*"*50)
+    print("use the follwing shortcode  to continue \n cc- create a new user account \n lg - login to your account\n  da - display your account\n ex -exit" )
+    print("*"*30)
+
+    code = input().lower()
+    if code  == 'cc':
+        print("create New user account")
+        print('*#'*40)
+        print("Enter your first name......")
+        firstname = input().
+        print("enter your username......")
+        username = input().
+        print("Enter your password......")
+        password = input().
+        save_user(create_new_user(firstname, username, password))
+        
+
+
+
 
 
 
