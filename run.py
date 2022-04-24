@@ -58,6 +58,21 @@ def display_credentials():
 def delete_credentials(platform):
     '''delete credentials'''
 
+    return Credentials.delete_credentials(platform)
+
+
+
+
+def find_credentials(user_account_username):
+
+    '''find credentials to delete'''
+
+    return Credentials.find_by_platform(user_account_username)
+
+
+def generate_password(password_length):
+    '''generate random password'''
+
 
 
 
