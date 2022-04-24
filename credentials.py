@@ -46,4 +46,16 @@ class Credentials():
 
         return cls.user_credentials
 
+    @classmethod
+    def generate_password(cls,password_length):
+        '''function generates a random password'''
+
+
+        characters = "01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ&*(){}[]|/\?!@#$%^abcdefghijklmnopqrstuvwxyz"
+        #characters from where the password will come from
+
+        #getlength of required ppassword
+        password = ''.join(random.choice(characters,password_length))
+
+        return password 
     
