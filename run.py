@@ -18,7 +18,15 @@ def save_user(user):
 def delete_user(username):
     '''delete user'''
 
-    return Users.user_exist(username)
+    return Users.delete_user(username)
+
+def check_existing_user(username):
+    '''check user exists'''
+
+
+    return Users.user_exists(username)
+
+
 
 def check_user_password(username, password):
     '''check user entered correct username and password'''
@@ -79,50 +87,121 @@ def generate_password(password_length):
 
 def main():
 
-    print("
-          _____                    _____                    _____                    _____                _____                    _____                    _____                    _____     _____          
-         /\    \                  /\    \                  /\    \                  /\    \              /\    \                  /\    \                  /\    \                  /\    \   /\    \         
-        /::\    \                /::\    \                /::\    \                /::\    \            /::\____\                /::\    \                /::\____\                /::\____\ /::\    \        
-       /::::\    \              /::::\    \              /::::\    \              /::::\    \          /:::/    /               /::::\    \              /:::/    /               /:::/    / \:::\    \       
-      /::::::\    \            /::::::\    \            /::::::\    \            /::::::\    \        /:::/    /               /::::::\    \            /:::/    /               /:::/    /   \:::\    \      
-     /:::/\:::\    \          /:::/\:::\    \          /:::/\:::\    \          /:::/\:::\    \      /:::/    /               /:::/\:::\    \          /:::/    /               /:::/    /     \:::\    \     
-    /:::/__\:::\    \        /:::/__\:::\    \        /:::/__\:::\    \        /:::/__\:::\    \    /:::/____/               /:::/__\:::\    \        /:::/    /               /:::/    /       \:::\    \    
-   /::::\   \:::\    \      /::::\   \:::\    \       \:::\   \:::\    \       \:::\   \:::\    \   |::|    |               /::::\   \:::\    \      /:::/    /               /:::/    /        /::::\    \   
-  /::::::\   \:::\    \    /::::::\   \:::\    \    ___\:::\   \:::\    \    ___\:::\   \:::\    \  |::|    |     _____    /::::::\   \:::\    \    /:::/    /      _____    /:::/    /        /::::::\    \  
- /:::/\:::\   \:::\____\  /:::/\:::\   \:::\    \  /\   \:::\   \:::\    \  /\   \:::\   \:::\    \ |::|    |    /\    \  /:::/\:::\   \:::\    \  /:::/____/      /\    \  /:::/    /        /:::/\:::\    \ 
-/:::/  \:::\   \:::|    |/:::/  \:::\   \:::\____\/::\   \:::\   \:::\____\/::\   \:::\   \:::\____\|::|    |   /::\____\/:::/  \:::\   \:::\____\|:::|    /      /::\____\/:::/____/        /:::/  \:::\____\
-\::/    \:::\  /:::|____|\::/    \:::\  /:::/    /\:::\   \:::\   \::/    /\:::\   \:::\   \::/    /|::|    |  /:::/    /\::/    \:::\  /:::/    /|:::|____\     /:::/    /\:::\    \       /:::/    \::/    /
- \/_____/\:::\/:::/    /  \/____/ \:::\/:::/    /  \:::\   \:::\   \/____/  \:::\   \:::\   \/____/ |::|    | /:::/    /  \/____/ \:::\/:::/    /  \:::\    \   /:::/    /  \:::\    \     /:::/    / \/____/ 
-          \::::::/    /            \::::::/    /    \:::\   \:::\    \       \:::\   \:::\    \     |::|____|/:::/    /            \::::::/    /    \:::\    \ /:::/    /    \:::\    \   /:::/    /          
-           \::::/    /              \::::/    /      \:::\   \:::\____\       \:::\   \:::\____\    |:::::::::::/    /              \::::/    /      \:::\    /:::/    /      \:::\    \ /:::/    /           
-            \::/____/               /:::/    /        \:::\  /:::/    /        \:::\  /:::/    /    \::::::::::/____/               /:::/    /        \:::\__/:::/    /        \:::\    \\::/    /            
-             ~~                    /:::/    /          \:::\/:::/    /          \:::\/:::/    /      ~~~~~~~~~~                    /:::/    /          \::::::::/    /          \:::\    \\/____/             
-                                  /:::/    /            \::::::/    /            \::::::/    /                                    /:::/    /            \::::::/    /            \:::\    \                   
-                                 /:::/    /              \::::/    /              \::::/    /                                    /:::/    /              \::::/    /              \:::\____\                  
-                                 \::/    /                \::/    /                \::/    /                                     \::/    /                \::/____/                \::/    /                  
-                                  \/____/                  \/____/                  \/____/                                       \/____/                  ~~                       \/____/                   
-                                                                                                                                                                                                              
-")
+    print("adle")
 
 
 
-while True:
-    print("*"*50)
-    print("use the follwing shortcode  to continue \n cc- create a new user account \n lg - login to your account\n  da - display your account\n ex -exit" )
-    print("*"*30)
+    while True:
+        print("*"*50)
+        print("use the follwing shortcode  to continue \n cc- create a new user account \n lg - login to your account\n  da - display your account\n ex -exit" )
+        print("*"*30)
 
-    code = input().lower()
-    if code  == 'cc':
-        print("create New user account")
-        print('*#'*40)
-        print("Enter your first name......")
-        firstname = input().
-        print("enter your username......")
-        username = input().
-        print("Enter your password......")
-        password = input().
-        save_user(create_new_user(firstname, username, password))
-        
+        code = input().lower()
+        if code  == 'cc':
+            print("create New user account")
+            print('*#'*40)
+            print("Enter your first name......")
+            firstname = input()
+            print("enter your username......")
+            username = input()
+            print("Enter your password......")
+            password = input()
+            save_user(create_new_user(firstname, username, password))
+
+            print("*"*30)
+            print(f"Hello {firstname}. account wa created !!!!!!!! login now")
+
+            print("*"*30)
+        elif code == 'lg' :
+            print("*"*30)
+            print("Enter your username..........")
+            username = input()
+            print("Enter your password..........")
+
+            password = input()
+            if check_existing_user(username):
+                if check_user_password(username, password):
+                    print("\n")
+                    print(f"Welcome to the pass vault: {username} ")
+                    print("*"*50)
+                    while True:
+                        print("select the options provided below\n")
+                        print("1. create credential\n 2. view saved credentials\n 3. Delete credentials \n 4.Logout")
+                        print("#"*40)
+                        choice = int(input())
+                        if choice == 1:
+                            print("Enter account name you want to create: ")
+                            platform = input()
+                            print("Enter username of the said account: ")
+                            user_account_username = input()
+                            print("\n")
+                           #allow user to generate password
+                            print("*"*50)
+                            print("Do you want to generate a new password or Enter your own ?\n \n Enter 1 to generate password\n Enter 2 to user your own password")
+                            print("#*"*50)
+                            print("\n")
+                            choice_1 = int(input())
+                            if choice_1 == 1:
+                                print("what long do you want the password to be ")
+
+                                password_length = int(input())
+                                account_password = generate_password(password_length)
+                                print(f"your password is {account_password}")
+                            elif choice == 2:
+                                print("Enter password of the account ")
+                                account_password = input()
+                            else:
+                                print("Thats a wrong response")
+
+                                #save Credentials
+                            save_credentials(create_new_credentials(platform,user_account_username,account_password))
+                            print(f"Your new credential with account name '{platform}' and password is '{account_password}' has been saved!!!\n ")
+                            print('#'*50)
+                        elif choice == 2:
+                            print("\n")
+                            print("Here are all the credentials in the vault")
+                            print("*"*50)
+
+                            if display_credentials():
+                                for Platform in display_credentials():
+                                    print(f"{Platform.platform} Account name, username:{Platform.user_account_username} and the password is : {Platform.account_password}\n")
+                                
+                            else:
+                                print("no accounts were found")
+                                print("//"*30)
+                        elif choice == 3:
+                            print("Enter account you want to delete")
+                            platform_to_delete = input()
+
+                            if find_credentials(platform_to_delete):
+
+                                print(f"account name '{platform_to_delete}' has been deleted")
+                                print("/n")
+                            else:
+                                print("*"*50)
+                                print(f"Platform  '{platform_to_delete}' do not exist")
+                                print('*'*50)
+                        elif choice == 4:
+                            print("you have logged out")
+                            print("*"*50)
+                            break
+                        else:
+                            print("no such account")
+            else:
+                print("YOu entered wrong credentials")
+        elif code == 'ex':
+            print("Goodbye.............")
+            break
+                    
+
+
+
+if __name__ == "__main__":
+    main()
+
+
+
+
 
 
 

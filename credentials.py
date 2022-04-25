@@ -1,4 +1,5 @@
 import random 
+import string
 
 # this will be used to help generate a custom password for
 
@@ -54,8 +55,9 @@ class Credentials():
         characters = "01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ&*(){}[]|/\?!@#$%^abcdefghijklmnopqrstuvwxyz"
         #characters from where the password will come from
 
-        #getlength of required ppassword
-        password = ''.join(random.choice(characters,password_length))
+        #getlength of required password
+        gen = string.ascii_letters + string.digits + string.digits
+        password = ''.join(random.choice(gen) for i in range(password_length))
 
         return password 
     

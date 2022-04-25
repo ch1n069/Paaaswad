@@ -41,6 +41,8 @@ class Users():
                 return True
         return False
 
+
+    @classmethod
     def check_user(cls,username, password):
         '''This block is here will check if user is present and the user
         password is also correct'''
