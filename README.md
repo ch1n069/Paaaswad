@@ -1,4 +1,5 @@
 # Password vault
+* This is a python CLI application that will enable users to create an account with the app .After they have created an account they now start saving their credentials in to the Pass vault system.
 
 ## Author Bruno Gatiba 
 
