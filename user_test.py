@@ -25,6 +25,22 @@ class TestUser(unittest.TestCase):
     def test_delete_user(self):
         '''check if user is deleted from the use account'''
         self.assertEqual(len(Users.user_list),0)
-        
+        self.new_user.save_user()
+        self.assertEqual(len(Users.user_list),1)
+        self.new_user.delete_user()
+        self.assertEqual(len(Users.user_list),0)
 
+
+
+    def test_find_user(self):
+        '''check wether account exists'''
+        self.found_user = Users.find_user("chino")
+
+    def test_user_exists(self):
+        '''check whethr user account exists'''
+
+        self.found_user = Users.find_user("chino")
+
+if __name__ == "__main__":
+    unittest.main()
     
