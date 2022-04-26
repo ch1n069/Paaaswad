@@ -15,4 +15,16 @@ class TestUser(unittest.TestCase):
         self.assertEqual(self.new_user.username, "chino")
         self.assertEqual(self.new_user.password,"1234")
 
-    def tes
+    def test_save_user(self):
+        '''check if object is saved to the use account'''
+        self.assertEqual(len(Users.user_list),0)
+        self.new_user.save_user()
+        self.assertEqual(len(Users.user_list),1)
+
+
+    def test_delete_user(self):
+        '''check if user is deleted from the use account'''
+        self.assertEqual(len(Users.user_list),0)
+        
+
+    
